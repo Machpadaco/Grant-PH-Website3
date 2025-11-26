@@ -76,32 +76,28 @@
 
     <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js"></script>
-
 <script type="module">
-    // Import the required modular functions
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js';
-    import { getFirestore, collection, addDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js';
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyBQ05ToTuuhkO5UxVukCefzusEao7yBq18",
-        authDomain: "grant-ph-website3.firebaseapp.com",
-        projectId: "grant-ph-website3",
-        storageBucket: "grant-ph-website3.firebasestorage.app",
-        messagingSenderId: "461386768222",
-        appId: "1:461386768222:web:711103928ddf345e94b9cf"
-    };
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyCTJSGpG4oIaZV1aMvVLSizfGOVcjK4W8g",
+    authDomain: "machpadacogrant.firebaseapp.com",
+    projectId: "machpadacogrant",
+    storageBucket: "machpadacogrant.firebasestorage.app",
+    messagingSenderId: "669610635430",
+    appId: "1:669610635430:web:e8e594de22f147b8b08467",
+    measurementId: "G-L6TY3VJZKP"
+  };
 
-    // Initialize Firebase and Firestore
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    // Make `db` and modular functions globally available so contact.js can use them
-    // This is often needed when using separate non-modular scripts.
-    window.db = db;
-    window.collection = collection;
-    window.addDoc = addDoc;
-    window.serverTimestamp = serverTimestamp;
-
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </script>
 
 <script src="js/contact.js"></script>
